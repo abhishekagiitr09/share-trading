@@ -2,8 +2,8 @@ name: Daily Stock Scan
 
 on:
   schedule:
-    - cron: "0 3 * * *
-    - cron: "30 15 * * *
+    - cron: "0 3 * * *"
+    - cron: "30 15 * * *"
   workflow_dispatch:   # ✅ allows manual run from UI
 
 jobs:
