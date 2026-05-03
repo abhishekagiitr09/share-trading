@@ -29,5 +29,5 @@ jobs:
 
       # ✅ Step 4: Run your Python script
       - name: Run stock scanner
-        run: python cerc_monitor.py
+        run: python trading.py
     - cron: "0 3 * * *"
