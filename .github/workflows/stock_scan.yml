@@ -10,7 +10,7 @@ on:
 jobs:
   run-stock-scan:
     runs-on: ubuntu-latest
-
+    
     steps:
       # ✅ Step 1: Checkout your repo
       - name: Checkout repository
