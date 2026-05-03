@@ -1,0 +1,33 @@
+name: Daily Stock Scan
+
+on:
+  schedule:
+    # ✅ 9:00 PM IST    # ✅ 8:30 AM IST
+    - cron: "30 15 * * *"
+
+  workflow_dispatch:   # ✅ allows manual run from UI
+
+jobs:
+  run-stock-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ✅ Step 1: Checkout your repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ✅ Step 2: Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ✅ Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      # ✅ Step 4: Run your Python script
+      - name: Run stock scanner
+        run: python cerc_monitor.py
+    - cron: "0 3 * * *"
