@@ -3,7 +3,8 @@ name: Daily Stock Scan
 on:
   schedule:
     # ✅ 9:00 PM IST    # ✅ 8:30 AM IST
-    - cron: "30 15 * * *"
+    - cron: "0 3 * * *
+    - cron: "30 15 * * *
 
   workflow_dispatch:   # ✅ allows manual run from UI
 
